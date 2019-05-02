@@ -15,7 +15,7 @@ def convert(args, out=sys.stdout):
         print("Sorted order", s)
         if s['m/z array'].shape[0] < args.min_peak_count:
             continue
-        mgf.write(s, output=out)
+        mgf.write([s,], output=out)
 
     """
     with mgf.read(args.lib_mgf) as reader:
